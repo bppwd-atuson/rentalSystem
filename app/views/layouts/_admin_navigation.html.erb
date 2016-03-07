@@ -1,0 +1,20 @@
+
+		<div class="row" id="header">
+			<div class="col-md-12">
+				<nav class=" navbar navbar-inverse">
+					<ul class="nav navbar-nav">
+					    <li><%= link_to image_tag("Logo.PNG"), "/" %></li>
+						<li class="nl"><%= link_to "Home" , "/" %> </li>
+						<li class="nl"><%= link_to "Admin" , "/admin/index" %> </li>
+						<li class="nl"><%= link_to "Products", "/products" %> </li>
+						
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+                    <% if user_signed_in? %>
+						<li class="ri" ><%= link_to "Sign Out", destroy_user_session_path, :method => "delete", :id => "so"%></li>
+	                <% end %>
+						</li>
+				</nav>
+			</div>
+		</div>
+
